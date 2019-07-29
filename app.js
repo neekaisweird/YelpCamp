@@ -17,7 +17,6 @@ var commentRoutes = require("./routes/comments"),
 	indexRoutes = require("./routes/index");
 
 mongoose.connect(process.env.DATABASEURL, {useNewUrlParser: true});
-// mongoose.connect("mongodb+srv://neeka:Moose21@cluster0-luoes.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
