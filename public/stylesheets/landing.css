@@ -3,7 +3,7 @@ body {
 }
 
 #landing-header {
-  z-index: 1;
+  z-index: 2;
   position: relative;
   text-align: center;
   padding-top: 40vh;
@@ -11,6 +11,14 @@ body {
 
 #landing-header h1 {
   color: #fff;
+  font-size: 45px;
+}
+
+#landing-header h6 {
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: .5px;
+  font-size: 14px;
 }
 
 .slideshow { 
@@ -36,27 +44,27 @@ body {
   background-repeat: no-repeat;
   opacity: 0;
   z-index: 0;
-  animation: imageAnimation 50s linear infinite; 
+  animation: imageAnimation 35s linear infinite; 
 }
 
 .slideshow li:nth-child(1) { 
-  background-image: url(http://i.imgur.com/emvhOnb.jpg );
+  background-image: url(../images/campground1.jpg);
 }
 .slideshow li:nth-child(2) { 
-  background-image: url(http://i.imgur.com/SBEmFpv.jpg);
-  animation-delay: 10s; 
+  background-image: url(../images/campground2.jpeg);
+  animation-delay: 7s; 
 }
 .slideshow li:nth-child(3) { 
-  background-image: url(http://i.imgur.com/K3mPv14.jpg);
-  animation-delay: 20s; 
+  background-image: url(../images/campground3.jpeg);
+  animation-delay: 14s; 
 }
 .slideshow li:nth-child(4) { 
-  background-image: url(http://i.imgur.com/2LSMCmJ.jpg);
-  animation-delay: 30s; 
+  background-image: url(../images/campground4.jpeg);
+  animation-delay: 21s; 
 }
 .slideshow li:nth-child(5) { 
-  background-image: url(http://i.imgur.com/TVGe0Ef.jpg);
-  animation-delay: 40s; 
+  background-image: url(../images/campground5.jpeg);
+  animation-delay: 28s; 
 }
 
 @keyframes imageAnimation { 

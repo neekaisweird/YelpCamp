@@ -9,13 +9,13 @@ router.get("/", function(req, res){
 		if(err){
 			console.log(err);
 		} else {
-			res.render("campgrounds/index", {campgrounds: allCampgrounds});
+			res.render("campgrounds/index", {campgrounds: allCampgrounds, page: "campgrounds"});
 		}
 	})
 });
 
 //CREATE
-router.post("/", middleware.isLoggedIn, function(req, res){
+router.post("/", middleware.isLoggedIn, middleware.isSafe, function(req, res){
 	var name = req.body.name;
 	var price = req.body.price;
 	var image = req.body.image;
@@ -47,7 +47,6 @@ router.get("/:id", function(req, res){
 			req.flash("error", "Campground not found");
 			res.redirect("back");
 		} else {
-			console.log(foundCampground);
 			res.render("campgrounds/show", {campground: foundCampground});
 		}
 	});
@@ -61,7 +60,7 @@ router.get("/:id/edit", middleware.checkCampgroundOwnership, function(req, res){
 });
 
 // UPDATE
-router.put("/:id", middleware.checkCampgroundOwnership, function(req, res){
+router.put("/:id", middleware.checkCampgroundOwnership, middleware.isSafe, function(req, res){
 	Campground.findByIdAndUpdate(req.params.id, req.body.campground, function(err, updatedCampground){
 		if(err){
 			res.redirect("/campgrounds");
