@@ -4,7 +4,7 @@
   "description": "YelpCamp",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", 
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
   "author": "Neeka Poklitar",
@@ -16,6 +16,7 @@
     "express": "^4.17.1",
     "express-session": "^1.16.2",
     "method-override": "^3.0.0",
+    "moment": "^2.24.0",
     "mongoose": "^5.6.4",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",

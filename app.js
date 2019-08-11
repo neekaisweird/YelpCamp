@@ -23,6 +23,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 mongoose.set('useFindAndModify', false);
 app.use(flash());
+app.locals.moment = require("moment");
 // seedDB();
 
 // PASSPORT CONFIG
